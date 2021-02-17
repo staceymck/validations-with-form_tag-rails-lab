@@ -13,7 +13,7 @@
   </div>
 <% end %> 
 
-<h2>Editing "<%= @post.title %>"</h2>
+<h2>Create a new post"<%= @post.title %>"</h2>
 <%= form_tag post_path(@post), method: "patch" do %>
   <div class="field<%= ' field_with_errors' if @post.errors.any? %>">
     <%= label_tag "title", "Title" %>
@@ -35,6 +35,5 @@
     <br />
     <%= text_area_tag "content", @post.content %>
   </div>
-  <%= submit_tag "Update" %>
+  <%= submit_tag "Create" %>
 <% end %>
-
